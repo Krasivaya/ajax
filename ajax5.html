@@ -30,15 +30,17 @@
       e.preventDefault();
 
       var name = document.getElementById('name1').value;
+      var params = 'name='+name
 
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'process.php?name='+name, true);
+      xhr.open('POST', 'process.php', true);
+      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
 
       xhr.onload = function(){
         console.log(this.responseText)
       }
 
-      xhr.send();
+      xhr.send(params);
     }
   </script>
   
