@@ -1,0 +1,1 @@
+## AJAX - GET & POST Method
